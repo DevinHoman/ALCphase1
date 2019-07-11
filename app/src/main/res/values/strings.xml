@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">ALC phase 1</string>
     <string name="action_settings">Settings</string>
+    <string name="contentDescription">none</string>
+    <string name="text_name">Devin Homan</string>
+    <string name="text_lovingandroid">Loving Android!!</string>
+    <string name="text_track">Track :</string>
+    <string name="text_android">Android</string>
+    <string name="text_country">Country :</string>
+    <string name="text_country1">South Africa</string>
+    <string name="text_email">Email :</string>
+    <string name="text_email1">homandevin@ymail.com</string>
+    <string name="text_phone">Cell Number :</string>
+    <string name="text_num">+2781 039 2978</string>
+    <string name="text_slack">Slack Username :</string>
+    <string name="text_slack1">\@Devin Homan</string>
+    <string name="text_alc">ALC 4.0</string>
+    <string name="title_myprofile">My Profile</string>
+    <string name="title_activity_web">WebActivity</string>
+
 </resources>
