@@ -16,11 +16,15 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class WebActivity extends AppCompatActivity {
 
     private WebView webView;
+    private ProgressBar progressBar;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,30 +35,28 @@ public class WebActivity extends AppCompatActivity {
 
 
         webView = findViewById(R.id.web_view);
-
+        webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
-
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setUseWideViewPort(true);
-        webSettings.setLoadWithOverviewMode(true);
-        webSettings.setDomStorageEnabled(true);
-
-        webView.setWebViewClient(new WebViewController());
+        webView.setScrollBarStyle(View.VISIBLE);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setAllowContentAccess(true);
+        webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NORMAL);
 
         webView.loadUrl("https://andela.com/alc/");
 
-
-
-
-
     }
 
-    private class WebViewController extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
+    @Override
+    public void onBackPressed() {
+        if(webView.canGoBack()){
+            webView.goBack();
+        }else{
+            super.onBackPressed();
         }
+
     }
 }
