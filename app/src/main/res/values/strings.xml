@@ -23,5 +23,6 @@
     <string name="btn_text_aboutalc">ABOUT ALC</string>
     <string name="btn_home_myprofile">MY PROFILE</string>
     <string name="content_pic_none">none</string>
+    <string name="toolbar_title">ALC Phase 1</string>
 
 </resources>
