@@ -1,4 +1,6 @@
-# ALCphase1 5 day code challege.
+# ALC Phase 1 
+
+5 day code challege.
 
 Completed!!
 
